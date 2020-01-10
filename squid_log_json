@@ -1,0 +1,4 @@
+#vi /etc/squid/squid.conf
+logformat combinedjson { "host":"%{Host}>h", "uname":"%un", "timestamp":"%tl", "client_ip":"%>a", "server_ip":"%<a", "response_time":"%tr", "total_size":"%st", "request_size":"%>st", "reply_size":"%<st", "http_url":"%ru", "http_domain":"%>rd", "http_port":"%>rP", "http_status":"%>Hs", "http_method":"%rm", "squid_request_status":"%Ss", "squid_hierarchy_status":"%Sh", "from_squid":"true", "content_type":"%mt" }
+#path/log
+access_log /var/log/squid/access_log.js combinedjson
